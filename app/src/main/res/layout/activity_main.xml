@@ -47,35 +47,51 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.example.lab1_2.views.BlockItem
+
+        </LinearLayout>
+
+        <com.example.lab1_2.views.HomeContent
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.example.lab1_2.views.ButtonMenu
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 app:src_image="@drawable/home"
                 app:text="@string/home_button"/>
 
-            <com.example.lab1_2.views.BlockItem
+            <com.example.lab1_2.views.ButtonMenu
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 app:src_image="@drawable/movies"
                 app:text="@string/movies_button"/>
 
-            <com.example.lab1_2.views.BlockItem
+            <com.example.lab1_2.views.ButtonMenu
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 app:src_image="@drawable/create"
                 app:text="@string/create_button"/>
 
-            <com.example.lab1_2.views.BlockItem
+            <com.example.lab1_2.views.ButtonMenu
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 app:src_image="@drawable/video"
                 app:text="@string/video_button"/>
 
-            <com.example.lab1_2.views.BlockItem
+            <com.example.lab1_2.views.ButtonMenu
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

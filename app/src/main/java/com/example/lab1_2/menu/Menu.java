@@ -25,7 +25,6 @@ public class Menu {
     public void onClickButton(Context context, View view) {
         for (ButtonMenu button : buttons) {
             if (button.checkButtonName(((Button) view).getText().toString())) {
-                ((Button) view).setTextColor(Color.parseColor("#FD5622"));
                 button.onClick(context);
                 break;
             }

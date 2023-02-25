@@ -4,44 +4,37 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
 import com.example.lab1_2.R;
 
-import org.w3c.dom.Attr;
-
-import java.lang.reflect.Type;
-
-public class BlockItem extends LinearLayout {
+public class ButtonMenu extends LinearLayout {
     private Button button;
 
-    public BlockItem(Context context) {
+    public ButtonMenu(Context context) {
         super(context);
 
         init(null);
     }
 
-    public BlockItem(Context context, @Nullable AttributeSet attrs) {
+    public ButtonMenu(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
 
         init(attrs);
     }
 
-    public BlockItem(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public ButtonMenu(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
         init(attrs);
     }
 
-    public BlockItem(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public ButtonMenu(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
 
         init(attrs);
@@ -51,17 +44,17 @@ public class BlockItem extends LinearLayout {
     private void init(@Nullable AttributeSet attrs) {
         LayoutInflater inflater = (LayoutInflater) getContext().
                 getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.block_item, this);
+        inflater.inflate(R.layout.button_menu, this);
 
         button = (Button) findViewById(R.id.button_menu);
 
         @SuppressLint("Recycle") TypedArray typedArray = getTypedArray(attrs);
-        setImage(typedArray.getResourceId(R.styleable.BlockItem_src_image, 0));
-        setText(typedArray.getString(R.styleable.BlockItem_text));
+        setImage(typedArray.getResourceId(R.styleable.ButtonMenu_src_image, 0));
+        setText(typedArray.getString(R.styleable.ButtonMenu_text));
     }
 
     private TypedArray getTypedArray(@Nullable AttributeSet attrs) {
-        return getContext().obtainStyledAttributes(attrs, R.styleable.BlockItem);
+        return getContext().obtainStyledAttributes(attrs, R.styleable.ButtonMenu);
     }
 
     private void setImage(int imageId) {
