@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Дзен</string>
+    <string name="home_button">Главная</string>
+    <string name="movies_button">Ролики</string>
+    <string name="create_button">Создать</string>
+    <string name="video_button">Видео</string>
+    <string name="channel_button">Канал</string>
+</resources>

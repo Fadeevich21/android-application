@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20sp">
+
+            <ImageView
+                android:layout_width="32sp"
+                android:layout_height="32sp"
+                android:src="@drawable/dzen_logo"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10sp"
+
+                android:text="@string/app_name"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="32sp"
+                android:layout_height="32sp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="240sp"
+                android:src="@drawable/search"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.example.lab1_2.views.BlockItem
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:src_image="@drawable/home"
+                app:text="@string/home_button"/>
+
+            <com.example.lab1_2.views.BlockItem
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:src_image="@drawable/movies"
+                app:text="@string/movies_button"/>
+
+            <com.example.lab1_2.views.BlockItem
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:src_image="@drawable/create"
+                app:text="@string/create_button"/>
+
+            <com.example.lab1_2.views.BlockItem
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:src_image="@drawable/video"
+                app:text="@string/video_button"/>
+
+            <com.example.lab1_2.views.BlockItem
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:src_image="@drawable/channel"
+                app:text="@string/channel_button"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
