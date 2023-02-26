@@ -9,5 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="light_grayish_yellow">#F3F3F1</color>
     <color name="gray_62">#9E9E9E</color>
-    <color name="on_click_button">#FD5622</color>
+    <color name="pure_red">#DD2C00</color>
 </resources>

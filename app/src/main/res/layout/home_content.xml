@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
@@ -16,18 +17,20 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="16sp"
-                android:paddingTop="10sp">
+                android:paddingStart="16sp"
+                android:paddingTop="10sp"
+                tools:ignore="RtlSymmetry">
 
                 <ImageView
                     android:layout_width="24sp"
                     android:layout_height="24sp"
 
-                    android:layout_marginRight="5sp"
+                    android:layout_marginEnd="5sp"
 
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/fire"/>
+                    android:src="@drawable/fire"
+                    android:contentDescription="@string/interesting_logo" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -44,82 +47,122 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
 
                 <ImageButton
-                    android:id="@+id/image_view"
+                    android:id="@+id/logo"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
 
-                    android:scaleType="centerInside"
                     android:adjustViewBounds="true"
-
                     android:background="?android:attr/selectableItemBackground"
 
-                    android:src="@drawable/logo_example"/>
+                    android:contentDescription="@string/account_logo"
+
+                    android:scaleType="centerInside"
+                    android:src="@drawable/logo_example"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <TextView
-                    android:id="@+id/text_view"
+                    android:id="@+id/nickname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/image_view"
-                    android:text="Fadeevich21"/>
+                    android:layout_toEndOf="@id/logo"
+                    android:text="@string/home_content_nickname_example"/>
 
                 <TextView
+                    android:id="@+id/subscribers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/text_view"
-                    android:layout_alignLeft="@+id/text_view"
-                    android:text="100КК подписчиков"
+                    android:layout_below="@id/nickname"
+                    android:layout_alignStart="@+id/nickname"
+                    android:text="@string/home_content_subscribers_example"
                     android:textSize="11sp"/>
 
-                <TextView
+                <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_toLeftOf="@id/more"
-                    android:layout_marginRight="5sp"
 
-                    android:textColor="@color/on_click_button"
-                    android:text="Подписаться"/>
+                    android:layout_marginEnd="5sp"
+                    android:layout_toStartOf="@id/more"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
 
-                <ImageView
+                    android:padding="0dp"
+
+                    android:text="@string/subscribe_button_text"
+                    android:textColor="@color/pure_red"
+                    android:textSize="11sp"
+                    tools:ignore="RelativeOverlap,TouchTargetSizeCheck" />
+
+                <ImageButton
                     android:id="@+id/more"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
 
-                    android:src="@drawable/more"/>
+                    android:background="?android:attr/selectableItemBackground"
+                    android:contentDescription="@string/more"
+                    android:src="@drawable/more"
+                    tools:ignore="TouchTargetSizeCheck" />
 
             </RelativeLayout>
 
             <ImageView
+                android:id="@+id/image_video"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:scaleType="centerInside"
                 android:adjustViewBounds="true"
 
-                android:src="@drawable/example"/>
+                android:src="@drawable/example"
+                android:contentDescription="@string/image_video" />
 
             <TextView
+                android:id="@+id/video_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="16dp"
+                android:paddingStart="16dp"
 
-                android:text="Мужик ловит пень"
+                android:text="@string/home_content_video_name_example"
                 android:textColor="@color/black"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="16dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-                android:text="9 лет назад • 1.3М просмотров"/>
+                <TextView
+                    android:id="@+id/year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+
+                    android:text="@string/home_content_year_example"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/home_content_delimiter"/>
+
+                <TextView
+                    android:id="@+id/watching"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/home_content_watching_example"/>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -130,46 +173,56 @@
 
 
                 <ImageButton
+                    android:id="@+id/like_button"
                     android:layout_width="16dp"
                     android:layout_height="16dp"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="5dp"
 
                     android:background="?android:attr/selectableItemBackground"
-                    android:src="@drawable/like"/>
+                    android:src="@drawable/like"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                    android:contentDescription="@string/like_button" />
 
                 <TextView
+                    android:id="@+id/number_likes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="13.5К"/>
+                    android:text="@string/home_content_number_likes_example"/>
 
                 <ImageButton
+                    android:id="@+id/comment_button"
                     android:layout_width="16dp"
                     android:layout_height="16dp"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="5dp"
 
                     android:background="?android:attr/selectableItemBackground"
-                    android:src="@drawable/comment"/>
+                    android:src="@drawable/comment"
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:contentDescription="@string/comment_button" />
 
                 <TextView
+                    android:id="@+id/number_comments"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="21"/>
+                    android:text="@string/home_content_number_comments_example"/>
 
                 <ImageButton
+                    android:id="@+id/reply_button"
                     android:layout_width="16dp"
                     android:layout_height="16dp"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="16dp"
 
                     android:background="?android:attr/selectableItemBackground"
-                    android:src="@drawable/reply"/>
+                    android:src="@drawable/reply"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                    android:contentDescription="@string/reply_button" />
 
                 <View
                     android:layout_width="0dp"
@@ -177,6 +230,7 @@
                     android:layout_weight="1" />
 
                 <ImageButton
+                    android:id="@+id/dislike_button"
                     android:layout_width="16dp"
                     android:layout_height="16dp"
                     android:layout_gravity="center"
@@ -184,7 +238,9 @@
                     android:layout_marginRight="16dp"
 
                     android:background="?android:attr/selectableItemBackground"
-                    android:src="@drawable/dislike"/>
+                    android:src="@drawable/dislike"
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:contentDescription="@string/dislike_button" />
 
             </LinearLayout>
 

@@ -1,9 +1,34 @@
 <resources>
     <string name="app_name">Дзен</string>
+
     <string name="home_button">Главная</string>
     <string name="movies_button">Ролики</string>
     <string name="create_button">Создать</string>
     <string name="video_button">Видео</string>
     <string name="channel_button">Канал</string>
+
     <string name="interesting_dzen">интересное в Дзене</string>
+
+    <string name="home_content_nickname_example">Fadeevich21</string>
+    <string name="home_content_subscribers_example">100М подписчиков</string>
+    <string name="subscribe_button_text">Подписаться</string>
+
+    <string name="interesting_logo">interesting logo</string>
+    <string name="account_logo">account logo</string>
+    <string name="more">more</string>
+
+    <string name="image_video">image video</string>
+    <string name="home_content_video_name_example">Мужик ловит пень</string>
+    <string name="home_content_year_example">9 лет назад</string>
+
+    <string name="home_content_delimiter"> • </string>
+
+    <string name="home_content_watching_example">1.3М просмотров</string>
+
+    <string name="like_button">like</string>
+    <string name="comment_button">comment</string>
+    <string name="dislike_button">dislike</string>
+    <string name="home_content_number_likes_example">13.5К</string>
+    <string name="home_content_number_comments_example">21</string>
+    <string name="reply_button">reply</string>
 </resources>
