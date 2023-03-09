@@ -13,4 +13,33 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="screen">
+        <item name="android:background">@color/light_grayish_yellow</item>
+    </style>
+
+    <style name="text">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="search">
+        <item name="android:src">@drawable/search</item>
+    </style>
+
+    <style name="home_content">
+        <item name="android:backgroundTint">@color/light_grayish_yellow</item>
+    </style>
+
+    <style name="home_content_inner">
+        <item name="android:backgroundTint">@color/white</item>
+    </style>
+
+    <style name="button_menu">
+        <item name="android:background">@drawable/border_light</item>
+    </style>
+
+    <style name="footer">
+        <item name="android:background">@color/white</item>
+    </style>
+
 </resources>

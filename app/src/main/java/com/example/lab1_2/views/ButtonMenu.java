@@ -38,7 +38,6 @@ public class ButtonMenu extends LinearLayout {
         super(context, attrs, defStyleAttr, defStyleRes);
 
         init(attrs);
-        
     }
 
     private void init(@Nullable AttributeSet attrs) {

@@ -21,14 +21,16 @@
     <string name="home_content_video_name_example">Мужик ловит пень</string>
     <string name="home_content_year_example">9 лет назад</string>
 
-    <string name="home_content_delimiter"> • </string>
+    <string name="home_content_delimiter">•</string>
 
-    <string name="home_content_watching_example">1.3М просмотров</string>
+    <string name="home_content_watching_example">1,3М просмотров</string>
 
     <string name="like_button">like</string>
     <string name="comment_button">comment</string>
     <string name="dislike_button">dislike</string>
-    <string name="home_content_number_likes_example">13.5К</string>
+    <string name="home_content_number_likes_example">13,5К</string>
     <string name="home_content_number_comments_example">21</string>
     <string name="reply_button">reply</string>
+    <string name="dzen">dzen</string>
+    <string name="search">search</string>
 </resources>

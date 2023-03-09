@@ -4,101 +4,166 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/screen"
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:paddingHorizontal="16sp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:src="@drawable/dzen_logo"
+            android:contentDescription="@string/dzen" />
+
+        <TextView
+            style="@style/text"
+
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20sp">
-
-            <ImageView
-                android:layout_width="32sp"
-                android:layout_height="32sp"
-                android:src="@drawable/dzen_logo"
-                android:layout_gravity="center"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="10sp"
-
-                android:text="@string/app_name"
-                android:textColor="@color/black"
-                android:textSize="32sp"
-                android:textStyle="bold"/>
-
-            <ImageView
-                android:layout_width="32sp"
-                android:layout_height="32sp"
-                android:layout_gravity="center"
-                android:layout_marginStart="240sp"
-                android:src="@drawable/search"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_gravity="center"
+            android:layout_marginStart="10sp"
 
 
-        </LinearLayout>
-
-        <com.example.lab1_2.views.HomeContent
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:text="@string/app_name"
+            android:textSize="32sp"
+            android:textStyle="bold"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="1" />
-        
+            android:layout_weight="1"/>
+
+        <ImageButton
+            style="@style/search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+
+            android:contentDescription="@string/search"
+
+            android:onClick="onClickSearch"
+            tools:ignore="TouchTargetSizeCheck,UsingOnClickInXml" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/body"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15sp"
+        app:layout_constraintBottom_toTopOf="@id/footer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        tools:ignore="SpeakableTextPresentCheck">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <com.example.lab1_2.views.ButtonMenu
-                android:layout_width="0dp"
+            <com.example.lab1_2.views.HomeContent
+                android:id="@+id/back"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:src_image="@drawable/home"
-                app:text="@string/home_button"/>
+                style="@style/home_content"
 
-            <com.example.lab1_2.views.ButtonMenu
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:src_image="@drawable/movies"
-                app:text="@string/movies_button"/>
+                app:logo="@drawable/logo_example"
+                app:nickname="Fadeevich"
+                app:number_comments="21"
 
-            <com.example.lab1_2.views.ButtonMenu
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:src_image="@drawable/create"
-                app:text="@string/create_button"/>
+                app:number_likes="21М"
+                app:number_subscribers="21М подписчиков"
+                app:number_watching="1.3М просмотров"
+                app:src_image_video="@drawable/example"
+                app:video_name="lofi hip hop radio"
+                app:year="9 лет назад" />
 
-            <com.example.lab1_2.views.ButtonMenu
-                android:layout_width="0dp"
+            <com.example.lab1_2.views.HomeContent
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:src_image="@drawable/video"
-                app:text="@string/video_button"/>
+                style="@style/home_content"
 
-            <com.example.lab1_2.views.ButtonMenu
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:src_image="@drawable/channel"
-                app:text="@string/channel_button"/>
+                app:logo="@drawable/logo_example"
+                app:nickname="Fadeevich"
+                app:number_comments="1"
+
+                app:number_likes="2"
+                app:number_subscribers="21М подписчиков"
+                app:number_watching="10 просмотров"
+                app:src_image_video="@drawable/example1"
+
+                app:video_name="Твоё имя - Русский трейлер"
+                app:year="3 дня назад" />
 
         </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/footer"
+        tools:ignore="MissingConstraints">
+
+        <com.example.lab1_2.views.ButtonMenu
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            style="@style/button_menu"
+            app:src_image="@drawable/home"
+            app:text="@string/home_button" />
+
+        <com.example.lab1_2.views.ButtonMenu
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            style="@style/button_menu"
+            app:src_image="@drawable/movies"
+            app:text="@string/movies_button" />
+
+        <com.example.lab1_2.views.ButtonMenu
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            style="@style/button_menu"
+            app:src_image="@drawable/create"
+            app:text="@string/create_button" />
+
+        <com.example.lab1_2.views.ButtonMenu
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            style="@style/button_menu"
+            app:src_image="@drawable/video"
+            app:text="@string/video_button" />
+
+        <com.example.lab1_2.views.ButtonMenu
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            style="@style/button_menu"
+            app:src_image="@drawable/channel"
+            app:text="@string/channel_button" />
 
     </LinearLayout>
 

@@ -8,16 +8,16 @@
     <declare-styleable name="HomeContent">
         <attr name="nickname" format="string"/>
         <attr name="logo" format="reference"/>
-        <attr name="number_subscribers" format="float"/>
+        <attr name="number_subscribers" format="string"/>
 
         <attr name="src_image_video" format="reference"/>
         <attr name="video_name" format="string"/>
-        <attr name="year" format="integer"/>
-        <attr name="number_watching" format="float"/>
+        <attr name="year" format="string"/>
+        <attr name="number_watching" format="string"/>
 
-        <attr name="number_likes" format="float"/>
-        <attr name="number_comments" format="float"/>
-        <attr name="number_replies" format="float"/>
-        <attr name="number_dislikes" format="float"/>
+        <attr name="number_likes" format="string"/>
+        <attr name="number_comments" format="string"/>
+        <attr name="number_replies" format="string"/>
+        <attr name="number_dislikes" format="string"/>
     </declare-styleable>
 </resources>

@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/button_menu"
 
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-
     android:background="?android:attr/selectableItemBackground"
+
     android:drawableTop="@drawable/home"
+    android:onClick="onClickButtonMenu"
 
+    android:orientation="vertical"
     android:text="@string/home_button"
-    android:textColor="@color/black"
-    android:textSize="11sp"
+    android:textColor="#757575"
 
-    android:onClick="onClickButtonMenu">
+    android:textSize="8sp"
+    tools:ignore="SmallSp,UsingOnClickInXml">
 
 </Button>
