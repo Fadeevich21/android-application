@@ -2,26 +2,29 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/screen"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20sp"
-        android:paddingHorizontal="16sp"
         android:orientation="horizontal"
+        android:paddingHorizontal="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <ImageView
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_gravity="center"
-            android:src="@drawable/dzen_logo"
-            android:contentDescription="@string/dzen" />
+            android:contentDescription="@string/dzen"
+            android:src="@drawable/dzen_logo" />
 
         <TextView
             style="@style/text"
@@ -34,12 +37,12 @@
 
             android:text="@string/app_name"
             android:textSize="32sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <ImageButton
             style="@style/search"
@@ -61,12 +64,12 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="15sp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
         app:layout_constraintBottom_toTopOf="@id/footer"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header"
-        android:clipToPadding="false"
-        android:fillViewport="true"
         tools:ignore="SpeakableTextPresentCheck">
 
         <LinearLayout
@@ -76,9 +79,9 @@
 
             <com.example.lab1_2.views.HomeContent
                 android:id="@+id/back"
+                style="@style/home_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/home_content"
 
                 app:logo="@drawable/logo_example"
                 app:nickname="Fadeevich"
@@ -92,9 +95,9 @@
                 app:year="9 лет назад" />
 
             <com.example.lab1_2.views.HomeContent
+                style="@style/home_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/home_content"
 
                 app:logo="@drawable/logo_example"
                 app:nickname="Fadeevich"
@@ -114,54 +117,54 @@
 
     <LinearLayout
         android:id="@+id/footer"
+        style="@style/footer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        style="@style/footer"
         tools:ignore="MissingConstraints">
 
         <com.example.lab1_2.views.ButtonMenu
+            style="@style/button_menu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
 
-            style="@style/button_menu"
+            android:layout_weight="1"
             app:src_image="@drawable/home"
             app:text="@string/home_button" />
 
         <com.example.lab1_2.views.ButtonMenu
+            style="@style/button_menu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
 
-            style="@style/button_menu"
+            android:layout_weight="1"
             app:src_image="@drawable/movies"
             app:text="@string/movies_button" />
 
         <com.example.lab1_2.views.ButtonMenu
+            style="@style/button_menu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
 
-            style="@style/button_menu"
+            android:layout_weight="1"
             app:src_image="@drawable/create"
             app:text="@string/create_button" />
 
         <com.example.lab1_2.views.ButtonMenu
+            style="@style/button_menu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
 
-            style="@style/button_menu"
+            android:layout_weight="1"
             app:src_image="@drawable/video"
             app:text="@string/video_button" />
 
         <com.example.lab1_2.views.ButtonMenu
+            style="@style/button_menu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
 
-            style="@style/button_menu"
+            android:layout_weight="1"
             app:src_image="@drawable/channel"
             app:text="@string/channel_button" />
 
